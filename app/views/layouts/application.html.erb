@@ -12,7 +12,22 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="bg-light">
+  <nav class="bg-primary navbar navbar-expand-lg navbar-light">
+  <a class="display-1 navbar-brand text-white" href="#">Yelp MVP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-warning my-2 my-sm-0"><%= link_to 'New Restaurant', new_restaurant_path, class: "text-white text-decoration-none" %></button>
+    </form>
+  </div>
+  </nav>
+
     <%= yield %>
   </body>
 </html>
